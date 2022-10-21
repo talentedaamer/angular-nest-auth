@@ -1,0 +1,40 @@
+<div [formGroup]="loginForm">
+
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        name="email"
+        placeholder="Email..."
+        formControlName="email"/>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        placeholder="Password..."
+        formControlName="password"/>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button
+      mat-flat-button
+      color="primary"
+      [disabled]="!isFormValid"
+      (click)="isLoginClick()">Login</button>
+
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="getCurrentUser()">Current User</button>
+  </div>
+
+</div>
