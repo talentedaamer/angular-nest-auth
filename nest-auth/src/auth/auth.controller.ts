@@ -71,7 +71,7 @@ export class AuthController {
             id: user.id
         });
 
-        response.cookie('jwt', jwt, { httpOnly: true});
+        response.cookie('jwt', jwt, { httpOnly: true})
 
         return user;
     }
